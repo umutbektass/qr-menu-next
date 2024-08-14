@@ -1,6 +1,5 @@
 import React from 'react'
 import Category from './category'
-import { FaCoffee } from "react-icons/fa";
 
 const Categories = ({searchParams }) => {
     const params = searchParams 
