@@ -1,8 +1,21 @@
+'use client'
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const MenuList = ({ params, menuItems }) => {
   // {params.test}
   return (
+    <motion.div initial={
+      { opacity:0,
+          translateY:25,
+        
+      }
+  }
+  animate={{
+      opacity:1,
+      translateY:0,
+     
+  }} transition={{duration:.5, delay:.5}}>
+   
     <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3'>
       {
         menuItems.map((menu, menuIndex) => (
@@ -28,6 +41,7 @@ const MenuList = ({ params, menuItems }) => {
         ))
       }
     </div>
+    </motion.div>
   )
 }
 

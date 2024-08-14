@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 import Category from './category'
-
+import { motion } from 'framer-motion'
 const Categories = ({searchParams }) => {
     const params = searchParams 
     console.log("params",params )
@@ -35,6 +36,19 @@ const Categories = ({searchParams }) => {
         }
     ]
   return (
+    <motion.div initial={
+        { opacity:0,
+            translateY:-25,
+          
+        }
+    }
+    animate={{
+        opacity:1,
+        translateY:0,
+       
+    }} transition={{duration:.5}}>
+      
+  
     <div className='mt-5 flex md:gap-0 lg:gap-4 overflow-y-auto mb-2'>
     {
         data.map((item,key)=>(
@@ -47,6 +61,7 @@ const Categories = ({searchParams }) => {
     }
 
    </div>
+   </motion.div>
   )
 }
 

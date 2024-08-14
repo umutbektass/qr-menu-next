@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Categories from "./components/categories";
 import MenuList from "./components/menu-list";
-
+import { motion } from "framer-motion";
 export default function Page({searchParams}) {
   const params =searchParams
   console.log("params page",params)
