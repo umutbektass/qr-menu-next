@@ -36,9 +36,9 @@ const Categories = ({searchParams }) => {
         }
     ]
   return (
-    <motion.div initial={
+    <motion.div className='overflow-y-auto' initial={
         { opacity:0,
-            translateY:-25,
+            translateY:-35,
           
         }
     }
@@ -46,7 +46,7 @@ const Categories = ({searchParams }) => {
         opacity:1,
         translateY:0,
        
-    }} transition={{duration:.5}}>
+    }} transition={{duration:.4}}>
       
   
     <div className='mt-5 flex md:gap-0 lg:gap-4 overflow-y-auto mb-2'>
