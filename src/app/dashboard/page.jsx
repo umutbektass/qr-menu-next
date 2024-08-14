@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import React from 'react'
 
-const page = () => {
+const Page = () => {
   const {data} = useSession()
   console.log("asıl data",data)
   // console.log("data",session)
@@ -12,4 +12,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

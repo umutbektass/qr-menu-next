@@ -2,7 +2,7 @@ import Link from "next/link";
 import Categories from "./components/categories";
 import MenuList from "./components/menu-list";
 
-export default function Home({searchParams}) {
+export default function Page({searchParams}) {
   const params =searchParams
   console.log("params page",params)
   const menuItems = [
