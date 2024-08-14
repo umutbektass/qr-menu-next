@@ -2,32 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@font-face {
+    font-family: Pacifico;
+    src: url(/fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: Nunito;
+    src: url(/fonts/Nunito/Nunito-VariableFont_wght.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body{
+    background-color: #F1F8FF;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1{
+    font-family: "Pacifico",sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.section-title{
+    position: relative;
+    display: inline-block;
 }
+.section-title::before,
+.section-title::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #FEA116;
+}
+.section-title::before{
+    right: 50px;
+}
+.section-title::after{
+    left: 50px;
+}
+
+
+
+/* custom font classes */
+.ff-primary{
+    font-family: "Pacifico",sans-serif;
+}
+.ff-second{
+    font-family: "Nunito", sans-serif;
+}
+
+/* custom text colors */
+.text-primary{
+    color: #FEA116;
+}
+
+
